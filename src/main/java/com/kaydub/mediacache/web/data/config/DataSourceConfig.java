@@ -18,8 +18,9 @@ public class DataSourceConfig {
     
     private static final String driver = "com.mysql.jdbc.Driver";
     private static final String url = "jdbc:mysql://localhost:3306/";
-    private static final String mcdb = "mediacache";
     private static final String autoconnect = "?autoReconnect=true";
+    @Value("${database.database}")
+    private String mcdb;
     @Value("${database.user}")
     private String user;
     @Value("${database.password}")
