@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        
+        <title>Login</title>
+        
+        
+        <script th:replace="../fragments/header:: jquery" />
+        <script th:replace="../fragments/header:: jqueryui" />
+        <link th:replace="../fragments/header:: jqueryuicss" />
+        <link th:replace="../fragments/header:: bootstrap" />
+        <link th:replace="../fragments/header:: bootstraptheme" />
+        <script th:replace="../fragments/header:: bootstrapjs" />
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-sm-1 col-xs-1 col-md-1"/>
+        <div class="col-sm-6 col-xs-6 col-md-6">
+        <h1>Login</h1>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-1 col-xs-1 col-md-1"/>
+        <div class="jumbotron col-xs-10 col-sm-10 col-md-10">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <img th:src="@{/images/loginlogo.png}" class="img-thumbnail img-responsive" alt=""/>
+        </div>
+        <br/>
+        <div class="col-xs-12 col-sm-12 col-md-12"/>
+        <div class="col-xs-3 col-md-3 col-sm-3"/>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+        Authorized Users only.<br/>
+        <form class="form-horizontal" name="loginForm" th:action="@{/j_spring_security_check}" method="POST">
+            <input type="text" name="username" value="" class="form-control" required="true" autofocus="true" placeholder="User Name"/><br/>
+            <input type="password" name="password" value="" class="form-control" placeholder="Password"/><br/>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+    </body>
+</html>
