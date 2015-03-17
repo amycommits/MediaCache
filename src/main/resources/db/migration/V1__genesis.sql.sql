@@ -13,8 +13,8 @@ CREATE TABLE USR_USER (
 INSERT INTO USR_USER
 VALUES
 ('admin','$2a$10$f6KnNYdq6omzg0pXaXpNfOchfCs1wG0wC3PYl5S25WGgVxIxDJ/oi','admin@gmail.com',1),
-('admin','$2a$10$f6KnNYdq6omzg0pXaXpNfOchfCs1wG0wC3PYl5S25WGgVxIxDJ/oi','userA@gmail.com',1),
-('admin','$2a$10$f6KnNYdq6omzg0pXaXpNfOchfCs1wG0wC3PYl5S25WGgVxIxDJ/oi','userB@gmail.com',1);
+('userA','$2a$10$f6KnNYdq6omzg0pXaXpNfOchfCs1wG0wC3PYl5S25WGgVxIxDJ/oi','userA@gmail.com',1),
+('userB','$2a$10$f6KnNYdq6omzg0pXaXpNfOchfCs1wG0wC3PYl5S25WGgVxIxDJ/oi','userB@gmail.com',1);
 
 CREATE TABLE USR_ROLES (
     `ROLE` VARCHAR(20) NOT NULL PRIMARY KEY
@@ -41,4 +41,6 @@ INSERT INTO USR_USER_ROLE
 VALUES
 ('admin','ROLE_ADMIN'),
 ('admin','ROLE_USER'),
-('admin','ROLE_SYSTEM');
+('admin','ROLE_SYSTEM'),
+('userA','ROLE_USER'),
+('userB','ROLE_USER');
