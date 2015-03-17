@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author Kevin W.
  */
 @Configuration
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = {"com.kaydub.mediacache.web.data.dao"})
 @EnableTransactionManagement
 public class JPAConfig {
     
