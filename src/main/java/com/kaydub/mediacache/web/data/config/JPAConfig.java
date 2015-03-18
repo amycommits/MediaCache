@@ -39,7 +39,7 @@ public class JPAConfig {
     }
     
     @Bean
-    public LocalContainerEntityManagerFactoryBean iasoEntityManagerFactory(DataSource mcDataSource, JpaVendorAdapter jpaVendorAdapter) {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource mcDataSource, JpaVendorAdapter jpaVendorAdapter) {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setDataSource(mcDataSource);
         factory.setJpaVendorAdapter(jpaVendorAdapter);

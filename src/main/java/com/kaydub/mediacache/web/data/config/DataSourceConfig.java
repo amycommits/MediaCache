@@ -6,6 +6,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -13,11 +14,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author Kevin W.
  */
 @Configuration
+@PropertySource("classpath:database.properties")
 @EnableTransactionManagement
 public class DataSourceConfig {
     
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String url = "jdbc:mysql://localhost:3306/";
+    private static final String url = "jdbc:mysql://192.168.60.7:3306/";
     private static final String autoconnect = "?autoReconnect=true";
     @Value("${database.database}")
     private String mcdb;
