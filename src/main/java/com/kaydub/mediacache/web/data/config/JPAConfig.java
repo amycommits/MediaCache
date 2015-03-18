@@ -4,6 +4,7 @@ package com.kaydub.mediacache.web.data.config;
 import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -39,6 +40,7 @@ public class JPAConfig {
     }
     
     @Bean
+    @DependsOn("flywayMc")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource mcDataSource, JpaVendorAdapter jpaVendorAdapter) {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setDataSource(mcDataSource);
