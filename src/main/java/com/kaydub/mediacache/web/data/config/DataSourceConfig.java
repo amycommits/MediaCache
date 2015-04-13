@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DataSourceConfig {
     
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String url = "jdbc:mysql://192.168.60.7:3306/";
+    private static final String url = "jdbc:mysql://127.0.0.1:3306/";
     private static final String autoconnect = "?autoReconnect=true";
     @Value("${database.database}")
     private String mcdb;
