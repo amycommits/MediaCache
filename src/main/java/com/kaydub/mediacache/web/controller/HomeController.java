@@ -25,5 +25,8 @@ public class HomeController {
     public ModelAndView login() {
         return new ModelAndView("login");
     }
-    
+        @RequestMapping("/failed")
+    public ModelAndView failed() {
+        return new ModelAndView("music/songs");
+    }
 }
