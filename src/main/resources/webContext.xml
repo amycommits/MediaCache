@@ -20,6 +20,8 @@
     
     <bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
     
+    <bean id="org.dozer.Mapper" class="org.dozer.DozerBeanMapper" />
+    
     <context:component-scan base-package="com.kaydub.mediacache.web"/>
     
 
