@@ -2,9 +2,6 @@
 package com.kaydub.mediacache.web.controller;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
     @RequestMapping("/index")
-    public String index(Model model)
+    public ModelAndView index(Model model)
     {
-        //ModelAndView modelAndview = new ModelAndView("index");
-        //return modelAndview;
-        return "index";
+        ModelAndView modelAndview = new ModelAndView("index");
+        return modelAndview;
     }
     
     @RequestMapping("/login")
